@@ -40,7 +40,6 @@ export class FlashDeal extends Component {
         // Set day til now to 7 days
         // this.endDate = new Date();
         // this.endDate.setDate(this.endDate.getDate() + 7);
-
         // Or just set a specific date
         this.endDate = new Date("2024-12-31");
         this.startTimer();
