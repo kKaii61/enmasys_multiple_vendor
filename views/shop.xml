@@ -5,7 +5,8 @@
             <main class="main">
                 <div id="wrap">
                     <owl-component name="enmasys_multiple_vendor.Shop" owl="1"/>
-                </main>
-            </t>
-        </template>
-    </odoo>
+                </div>
+            </main>
+        </t>
+    </template>
+</odoo>
