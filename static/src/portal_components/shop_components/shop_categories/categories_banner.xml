@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="enmasys_multiple_vendor.CategoriesBanner">
         <section>
-            <!-- /.ei-slider -->
+            <!-- /.ei-slider start -->
             <div id="ei-slider" class="ei-slider">
                 <div class="ei-slider-loading" style="display: block;">Loading</div>
                 <ul class="ei-slider-large p-0 w-100">
@@ -30,7 +30,7 @@
                     </t>
                 </ul>
             </div>
-            <!-- /.ei-slider -->
+            <!-- /.ei-slider end -->
         </section>
     </t>
 </templates>

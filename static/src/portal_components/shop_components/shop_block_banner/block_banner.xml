@@ -10,6 +10,8 @@
                                 <div class="image-banner">
                                     <div class="banner-box">
                                         <img class="rounded" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_blockbanner/'+product.imgName" data-src="" alt="Banner Image" title="Banner Image"/>
+                                        
+                                        
                                         <!-- <div class="banner-overlay">
                                             <div class="banner-texts">
                                                 <div class="banner-overlay-title">
