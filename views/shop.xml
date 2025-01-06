@@ -1,0 +1,17 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <template id="multiple_vendor_shop_body" name="Shop Body">
+        <t t-call="website.layout">
+            <xpath expr="//main" position="replace">
+                <main class="main">
+                    <div id="wrap">
+                        <owl-component name="enmasys_multiple_vendor.CategoriesBanner" owl="1"/>
+                        <owl-component name="enmasys_multiple_vendor.BlockBanner" owl="1"/>
+                        <owl-component name="enmasys_multiple_vendor.FeaturedCategories" owl="1"/>
+                        <owl-component name="enmasys_multiple_vendor.FlashDeal" owl="1"/>
+                    </div>
+                </main>
+            </xpath>
+        </t>
+    </template>
+</odoo>

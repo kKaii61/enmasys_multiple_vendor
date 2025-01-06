@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="reserve">
+    <t t-name="enmasys_multiple_vendor.FeaturedCategories">
+        <section class="featured-category-section my-md-5 my-5">
+            <div class="container-fluid mx-2 overflow-x-hidden overflow-y-hidden position-relative">
+                <div class="sell-header mb-4 mt-xl-0 d-flex">
+                    <div class="sell-header-title">
+                        <h2>
+                            Featured Categories
+                            <i class="fas fa-project-diagram"></i>
+                        </h2>
+                    </div>
+                    <div class="header-line">
+                        <span></span>
+                    </div>
+                </div>
+                <!-- /.sell-header -->
+                <div id="owl-container" class="featured-categories owl-carousel ol-theme owl-loaded owl-drag">
+                    <!-- /.featured-category -->
+                    <!-- /.featured-category -->
+                    <!-- /.featured-category -->
+                    <div class="owl-stage-outer owl-height"
+                    t-on-mousemove="(e)=>this.handleMouseMove(e, this.sliderRef.el)"
+                    t-on-mousedown="(e)=>this.handleMouseDown(e,this.sliderRef.el)"
+                    t-on-mouseup="(e)=>this.handleMouseUp(e,this.sliderRef.el)"
+                    >
+                        <div id="owl-demo" class="owl-stage d-flex d-nowrap"
+                        t-ref="sliderRef"
+                        t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'">
+                            <!-- clone loop here -->
+                            <t t-foreach="this.categories" t-as="category" t-key="'clone_'+category.id">
+                                <div class="cloned owl-item pb-5 noselect">
+                                    <div class="featured-category">
+                                        <a class="noselect" href="">
+                                            <figure>
+                                                <img class="noselect rounded-circle mw-100" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_carousel/' + category.img +'.png'" data-src="https://www.zcart.incevio.cloud/image/images/6506d009f0cba.webp?p=full" t-att-alt="category.name" alt="Auto Parts"/>
+                                            </figure>
+                                            <div class="featured-category-text w-100 py-2">
+                                                <h3 class="pb-1" t-esc="category.name"></h3>
+                                                <span t-esc="category.classify +' items'"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+                            <!-- loop here -->
+                            <!-- loop here -->
+                            <t t-foreach="this.categories" t-as="category" t-key="category.id">
+                                <div class="owl-item pb-5 noselect">
+                                    <div class="featured-category">
+                                        <a class="noselect" href="">
+                                            <figure>
+                                                <img class="noselect rounded-circle mw-100" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_carousel/' + category.img +'.png'" data-src="https://www.zcart.incevio.cloud/image/images/6506d009f0cba.webp?p=full" t-att-alt="category.name" alt="Auto Parts"/>
+                                            </figure>
+                                            <div class="featured-category-text w-100 py-2">
+                                                <h3 class="pb-1" t-esc="category.name"></h3>
+                                                <span t-esc="category.classify +' items'"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+                            <!-- loop here -->
+                            <!-- clone loop here -->
+                            <t t-foreach="this.categories" t-as="category" t-key="'clone_'+category.id">
+                                <div class="cloned owl-item pb-5 noselect">
+                                    <div class="featured-category">
+                                        <a class="noselect" href="">
+                                            <figure>
+                                                <img class="noselect rounded-circle mw-100" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_carousel/' + category.img +'.png'" data-src="https://www.zcart.incevio.cloud/image/images/6506d009f0cba.webp?p=full" t-att-alt="category.name" alt="Auto Parts"/>
+                                            </figure>
+                                            <div class="featured-category-text w-100 py-2">
+                                                <h3 class="pb-1" t-esc="category.name"></h3>
+                                                <span t-esc="category.classify +' items'"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <!-- NAV BUTTON -->
+                    <div class="owl-nav">
+                        <button t-on-click="prevItem" type="button" role="presentation" class="owl-prev">
+                            <span aria-label="Previous">‹</span>
+                        </button>
+                        <button t-on-click="nextItem" type="button" role="presentation" class="owl-next">
+                            <span aria-label="Next">›</span>
+                        </button>
+                    </div>
+                    <div class="owl-dots disabled"></div>
+                </div>
+                <!-- /.featured-categories -->
+            </div>
+        </section>
+    </t>
+</templates>

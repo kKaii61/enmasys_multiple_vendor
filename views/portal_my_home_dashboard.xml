@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="dashboard_template" name="Dashboard Template">
+        <t t-call="website.layout">
+            <div class="container">
+                <t t-set="currentView" t-value="request.params.get('view', 'dashboard')" />
+                <div id="dashboard-root">
+                    <owl-component name="enmasys_multiple_vendor.DashboardComponent" t-props="{ currentView: currentView }"/>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

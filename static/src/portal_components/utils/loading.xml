@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Template cho biểu tượng loading -->
+    <t t-name="enmasys_multiple_vendor.LoadingComponent">
+        <div class="loading-overlay">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+        </div>
+    </t>
+</templates>

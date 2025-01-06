@@ -1,0 +1,16 @@
+<!-- views/layout.xml -->
+<odoo>
+    <template id="multiple_vendor_header" inherit_id="website.layout" name="Multiple Header Layout">
+        <!-- Ghi đè phần tử header -->
+        <xpath expr="//header" position="replace">
+            <owl-component name="enmasys_multiple_vendor.HeaderComponent" owl="1"/>
+        </xpath>
+    </template>
+
+    <template id="multiple_vendor_footer" inherit_id="website.layout" name="Multiple Footer Layout">
+        <!-- Ghi đè phần tử header -->
+        <xpath expr="//footer" position="replace">
+            <owl-component name="enmasys_multiple_vendor.FooterComponent" owl="1"/>
+        </xpath>
+    </template>
+</odoo>

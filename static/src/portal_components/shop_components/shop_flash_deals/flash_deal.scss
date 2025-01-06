@@ -1,0 +1,253 @@
+// Reused Styles
+
+#wrapwrap {
+    overflow: unset;
+}
+
+.container {
+    margin: 0 0.5rem;
+}
+
+//////////////
+/// 
+/// 
+///
+
+.flash-deal {
+    display: flex;
+    justify-content: center;
+}
+
+.sell-header-title {
+    min-width: max-content;
+    max-width: max-content;
+}
+
+.flash-sell-timer-time {
+    background: var(--color-primary);
+    color: var(--color-white);
+    min-width: 310px;
+    text-align: center;
+}
+
+// button \\
+.best-deal-arrow {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.best-deal-arrow ul {
+    list-style-type: none;
+    display: contents;
+}
+
+.slider-arrow {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+}
+
+.slider-arrow i {
+    font-size: 1.6rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.slider-arrow:hover {
+    background: var(--color-primary);
+    transition: all 0.2s ease-in-out;
+}
+
+.slider-arrow:hover i {
+    color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(12%, 36%);
+}
+
+.fa-chevron-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-12%, 36%);
+}
+
+// Box inner \\
+//**  animation start  **\\
+.box-inner {
+    display: flex;
+    flex-direction: column;
+    border: solid transparent 2px;
+    // transform-origin: 0 0;
+    // transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.box-inner:hover {
+    border: solid var(--color-primary) 2px;
+    // transform: scaleX(1);
+}
+
+//  --    animation end   --  \\
+
+// PRODUCT ITEM
+.box-title {
+    height: 50px;
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+.box-rating {
+    display: flex;
+}
+
+.box-rating ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-rating li a {
+    color: var(--color-primary) !important;
+}
+
+.box-rating li i {
+    font-size: 1.5rem;
+}
+
+.box-price {
+    display: flex;
+}
+.box-price p {
+    margin-bottom: 0;
+}
+
+.box-price-new {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.box-price-old {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+// Box action vertical \\
+.box-action-vertical {
+    top: 10px;
+    right: 0;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+
+.box-inner:hover .box-action-vertical{
+    opacity: 1;
+    transform: translate3d(-30%, 0, 0);
+}
+
+.box-action-vertical>div {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    background: var(--color-gray);
+    color: var(--color-black);
+}
+
+.box-action-vertical>div i,
+.box-action-vertical>div svg {
+    font-size: 1.6rem;
+}
+
+.box-action-vertical>div:hover {
+    background: var(--color-primary);
+}
+
+.box-action-vertical>div:hover i,
+.box-action-vertical>div:hover svg {
+    color: var(--color-white);
+    fill: var(--color-white);
+}
+
+// box action \\
+
+//**  animation start  **\\
+.box-action {
+    position: absolute;
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    padding-bottom: 8px;
+    background: var(--color-white);
+    bottom: 0;
+}
+
+.box-inner:hover .box-action {
+    transform: translate3d(0, 0, 0);
+}
+.box-inner:hover .box-title {
+    opacity: 0;
+}
+
+//  --    animation end   --  \\
+
+.box-action-price {
+    height: 25%;
+}
+
+.box-action>.box-cart a {
+    width: 100%;
+    height: 60px;
+    padding: 0.8rem;
+}
+
+.box-action>.box-cart a,
+.box-action>.box-cart i {
+    font-size: 1.6rem;
+}
+
+// Flash deal product \\
+.flash-deal-product {
+    border: 2px solid var(--color-primary);
+    
+}
+
+.flash-deal-product-view{
+    display: block;
+    width: 50%;
+}
+
+.flash-deal-product-details {
+    display: block;
+    width: 50%;
+}
+
+.flash-deal-product-image {
+    height: 100%;
+}
+
+
+
+.flash-deal-product-rating {
+    display: flex;
+}
+
+.flash-deal-product-rating ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+// ------- flash deal end ------ \\

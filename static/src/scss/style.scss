@@ -1,0 +1,240 @@
+/*********************************************************************************
+
+	Template Name: Histudy - Online Courses & Education Bootstrap5 Template
+	Description: A perfect Template For Education. It comes with nice and clean design.
+
+	Note: This is style css.
+
+**********************************************************************************/
+
+/**************************************************************
+	
+	STYLESHEET INDEXING
+	|
+	|
+	|___ Default Styles
+	|	|
+	|	|___ variables
+	|	|___ mixins
+	|	|___ reset
+	|	|___ typography
+	|	|___ extend
+	|	|___ animations
+	|	|___ shortcode
+	|	|___ spacing
+	|	|___ edu-common
+	|	|___ forms
+	|	|___ text-animation
+	|
+	|
+	|___Header Styles
+	|	|___ header-common
+	|	|___ headertop
+	|	|___ offertopbar
+	|	|___ headermid
+	|	|___ social-share
+	|	|___ header
+	|	|___ nav
+	|	|___ mega-menu
+	|	|___ mobilemenu
+	|	|___ offcanvas
+	|	|___ one-page-navigation
+	|
+	|
+	|___Elements Styles
+	|	|___ button 
+	|	|___ section-title
+	|	|___ breadcrumb
+	|	|___ card
+	|	|___ course-meta
+	|	|___ service
+	|	|___ feature
+	|	|___ about
+	|	|___ callto-action
+	|	|___ accordion
+	|	|___ image-gallery
+	|	|___ counterup
+	|	|___ pricingtable
+	|	|___ badge
+	|	|___ team
+	|	|___ social
+	|	|___ pagination
+	|	|___ backtotop
+	|	|___ newsletterform
+	|	|___ brand
+	|	|___ portfolio
+	|	|___ contact
+	|	|___ testimonial
+	|	|___ advance-tab
+	|	|___ category
+	|	|___ instagram
+	|	|___ split
+	|	|___ countdown
+	|	|___ progressbar
+	|	|___ category-box
+	|	|___ course-filter
+	|	|___ modal
+	|	|___ list
+	|	|___ search
+	|	|___ video
+	|	|___ 404
+
+	|___Blog Styles
+	|	|___ blog 
+	|	|___ post-default 
+	|	|___ sidebar 
+	|	|___ blog-details 
+	|	|___ unit-test 
+
+	|___Shop Styles
+	|	|___ shop 
+	|	|___ product-details 
+	|	|___ my-account 
+	|	|___ cart 
+	|	|___ checkout 
+	|	|___ minicart 
+
+	|___Template Styles
+	|	|___ banner 
+	|	|___ course-details 
+	|	|___ course-sidebar 
+	|	|___ contact 
+	|	|___ sidebar 
+	|	|___ course-action-bottom 
+
+
+	|___Footer Styles
+	|	|___ footer 
+	|	|___ copyright 
+	|	|___ back-to-top 
+	|	|___ dark 
+	|
+	|
+	|___ END STYLESHEET INDEXING
+
+***************************************************************/
+
+
+/**************************************
+    Default Styles
+***************************************/
+@import '/enmasys_multiple_vendor/src/scss/default/variables';
+@import '/enmasys_multiple_vendor/src/scss/default/mixins';
+@import '/enmasys_multiple_vendor/src/scss/default/reset';
+@import '/enmasys_multiple_vendor/src/scss/default/typography';
+@import '/enmasys_multiple_vendor/src/scss/default/extend';
+@import '/enmasys_multiple_vendor/src/scss/default/animations';
+@import '/enmasys_multiple_vendor/src/scss/default/shortcode';
+@import '/enmasys_multiple_vendor/src/scss/default/spacing';
+@import '/enmasys_multiple_vendor/src/scss/default/edu-common';
+@import '/enmasys_multiple_vendor/src/scss/default/forms';
+@import '/enmasys_multiple_vendor/src/scss/default/text-animation';
+
+
+
+/**************************************
+	Header Styles
+***************************************/
+
+@import '/enmasys_multiple_vendor/src/scss/header/common/header-common';
+@import '/enmasys_multiple_vendor/src/scss/header/common/headertop';
+@import '/enmasys_multiple_vendor/src/scss/header/topoffer/offertopbar';
+@import '/enmasys_multiple_vendor/src/scss/header/headermiddle/headermid';
+@import '/enmasys_multiple_vendor/src/scss/header/social-share';
+@import '/enmasys_multiple_vendor/src/scss/header/header';
+@import '/enmasys_multiple_vendor/src/scss/header/nav';
+@import '/enmasys_multiple_vendor/src/scss/header/mega-menu';
+@import '/enmasys_multiple_vendor/src/scss/header/mobilemenu';
+@import '/enmasys_multiple_vendor/src/scss/header/offcanvas';
+@import '/enmasys_multiple_vendor/src/scss/header/one-page-navigation';
+
+
+
+/**************************************
+	Elements Styles
+***************************************/
+@import '/enmasys_multiple_vendor/src/scss/elements/button';
+@import '/enmasys_multiple_vendor/src/scss/elements/section-title';
+@import '/enmasys_multiple_vendor/src/scss/elements/breadcrumb';
+@import '/enmasys_multiple_vendor/src/scss/elements/card';
+@import '/enmasys_multiple_vendor/src/scss/elements/course-meta';
+@import '/enmasys_multiple_vendor/src/scss/elements/service';
+@import '/enmasys_multiple_vendor/src/scss/elements/swiper';
+@import '/enmasys_multiple_vendor/src/scss/elements/feature';
+@import '/enmasys_multiple_vendor/src/scss/elements/about';
+@import '/enmasys_multiple_vendor/src/scss/elements/callto-action';
+@import '/enmasys_multiple_vendor/src/scss/elements/accordion';
+@import '/enmasys_multiple_vendor/src/scss/elements/image-gallery';
+@import '/enmasys_multiple_vendor/src/scss/elements/counterup';
+@import '/enmasys_multiple_vendor/src/scss/elements/pricingtable';
+@import '/enmasys_multiple_vendor/src/scss/elements/badge';
+@import '/enmasys_multiple_vendor/src/scss/elements/team';
+@import '/enmasys_multiple_vendor/src/scss/elements/social';
+@import '/enmasys_multiple_vendor/src/scss/elements/pagination';
+@import '/enmasys_multiple_vendor/src/scss/elements/backtotop';
+@import '/enmasys_multiple_vendor/src/scss/elements/newsletterform';
+@import '/enmasys_multiple_vendor/src/scss/elements/brand';
+@import '/enmasys_multiple_vendor/src/scss/elements/portfolio';
+@import '/enmasys_multiple_vendor/src/scss/elements/contact';
+@import '/enmasys_multiple_vendor/src/scss/elements/testimonial';
+@import '/enmasys_multiple_vendor/src/scss/elements/advance-tab';
+@import '/enmasys_multiple_vendor/src/scss/elements/category';
+@import '/enmasys_multiple_vendor/src/scss/elements/instagram';
+@import '/enmasys_multiple_vendor/src/scss/elements/split';
+@import '/enmasys_multiple_vendor/src/scss/elements/countdown';
+@import '/enmasys_multiple_vendor/src/scss/elements/progressbar';
+@import '/enmasys_multiple_vendor/src/scss/elements/category-box';
+@import '/enmasys_multiple_vendor/src/scss/elements/course-filter';
+@import '/enmasys_multiple_vendor/src/scss/elements/modal';
+@import '/enmasys_multiple_vendor/src/scss/elements/list';
+@import '/enmasys_multiple_vendor/src/scss/elements/search';
+@import '/enmasys_multiple_vendor/src/scss/elements/video';
+@import '/enmasys_multiple_vendor/src/scss/elements/404';
+
+/**************************************
+	Blog Styles
+***************************************/
+@import '/enmasys_multiple_vendor/src/scss/blog/blog';
+@import '/enmasys_multiple_vendor/src/scss/blog/post-default';
+@import '/enmasys_multiple_vendor/src/scss/blog/sidebar';
+@import '/enmasys_multiple_vendor/src/scss/blog/blog-details';
+@import '/enmasys_multiple_vendor/src/scss/blog/unit-test';
+
+
+/**************************************
+	Shop Styles
+***************************************/
+
+@import '/enmasys_multiple_vendor/src/scss/shop/shop';
+@import '/enmasys_multiple_vendor/src/scss/shop/product-details';
+@import '/enmasys_multiple_vendor/src/scss/shop/my-account';
+@import '/enmasys_multiple_vendor/src/scss/shop/cart';
+@import '/enmasys_multiple_vendor/src/scss/shop/checkout';
+@import '/enmasys_multiple_vendor/src/scss/shop/minicart';
+
+
+/**************************************
+	Template Styles
+***************************************/
+@import '/enmasys_multiple_vendor/src/scss/template/banner';
+@import '/enmasys_multiple_vendor/src/scss/template/course-details';
+@import '/enmasys_multiple_vendor/src/scss/template/course-sidebar';
+@import '/enmasys_multiple_vendor/src/scss/template/contact';
+@import '/enmasys_multiple_vendor/src/scss/template/sidebar';
+@import '/enmasys_multiple_vendor/src/scss/template/course-action-bottom';
+@import '/enmasys_multiple_vendor/src/scss/template/instructor-dashboard';
+@import '/enmasys_multiple_vendor/src/scss/template/lesson';
+
+
+/**************************************
+	Footer Styles
+***************************************/
+@import '/enmasys_multiple_vendor/src/scss/footer/footer';
+@import '/enmasys_multiple_vendor/src/scss/footer/copyright';
+@import '/enmasys_multiple_vendor/src/scss/footer/back-to-top';
+@import '/enmasys_multiple_vendor/src/scss/footer/dark';
+@import '/enmasys_multiple_vendor/src/scss/template/preview';
+
+
+
+

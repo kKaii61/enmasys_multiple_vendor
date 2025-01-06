@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="reserve">
+    <t t-name="enmasys_multiple_vendor.FlashDeal">
+        <t t-value=""/>
+        <div class="flash-deal-area">
+            <section id="flash-deal" class="mb-3">
+                <div class="flash-deal pt-0">
+                    <div class="container-fluid mx-2">
+                        <div class="flash-deal-inner">
+                            <div class="sell-header d-flex flex-wrap align-items-center">
+                                <div class="sell-header-title">
+                                    <h2 class="font-weight-bold mt-4 me-5 col">
+                                        Flash Deal
+                                        <i class="fas fa-flash"></i>
+                                    </h2>
+                                </div>
+                                <div class="flash-sell-timer col-sm-5 offset-sm-2 col-md-6 offset-md-0 d-flex align-items-center">
+                                    <span class="me-4">
+                                        Offer Ends In :
+                                    </span>
+                                    <div class="flash-sell-timer-time px-4 py-2 rounded" >
+                                        <span class="deal-counter-days">
+                                            <t t-esc="this.timeRemaining.days"/>
+                                        </span> days :
+                                        <span class="deal-counter-hours">
+                                            <t t-esc="this.timeRemaining.hours"/>
+                                        </span> hrs :
+                                        <span class="deal-counter-minutes">
+                                            <t t-esc="this.timeRemaining.minutes"/>
+                                        </span> mins :
+                                        <span class="deal-counter-seconds">
+                                            <t t-esc="this.timeRemaining.seconds"/>
+                                        </span> sec
+                                    </div>
+                                </div>
+                                <div class="header-line">
+                                    <span></span>
+                                </div>
+                                <div class="best-deal-arrow d-flex justify-content-end gap-2">
+                                    <ul>
+                                        <li>
+                                            <button class="left-arrow slider-arrow flashdeal-left slick-arrow rounded-circle" style="">
+                                                <i class="fas fa-chevron-left btn-icon p-3"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="right-arrow slider-arrow flashdeal-right slick-arrow rounded-circle" style="">
+                                                <i class="fas fa-chevron-right btn-icon p-3"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- END SELL HEADER -->
+                            <div class="flashdeal mb-3">
+                                <div class="recent-inner">
+                                    <div class="recent-items">
+                                        <div class="flashdeal-items-inner slick-initialized slick-slider" style="display: block;">
+                                            <div class="slick-list draggable">
+                                                <div class="slick-track" style="">
+                                                    <div
+                                                    t-ref="sliderRef"
+                                                    t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'"
+                                                     class="items-slider box border-animate slick-slide slick-cloned d-flex flex-nowrap" data-slick-index="" aria-hidden="true" tabindex="-1">
+                                                        <t t-foreach="this.products" t-as="product" t-key="product.id">
+                                                            <!-- loop start -->
+                                                            <div class="box-inner position-relative col-2">
+                                                                <a href="" tabindex="-1">
+                                                                    <div class="recent-items-img box-img">
+                                                                        <img class="lazy" style="width: 100%; max-height:183px; object-fit: cover;" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" t-att-alt="product.name + '.'" t-att-title="product.name + '.'"/>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="box-title">
+                                                                    <a href="" tabindex="-1">
+                                                                        <t t-esc="product.name + '.'"/>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="box-rating">
+                                                                    <ul class="gap-2 p-0 my-0">
+                                                                        <t t-foreach="this.generateStars(product.rating)" t-as="star" t-key="star.index">
+                                                                            <li>
+                                                                                <a href="#" tabindex="-1">
+                                                                                    <i t-att-class="star.type"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                        </t>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="box-price">
+                                                                    <p class="feature-items-price-new box-price-new m-0 me-3">
+                                                                        <t t-esc="'$'+product.price_new"/>
+                                                                    </p>
+                                                                    <p class="feature-items-price-old box-price-old ">
+                                                                        <t t-esc="'$'+product.price_old"/>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- floating when hover -->
+                                                                <div class="box-action-vertical d-flex flex-column position-absolute gap-3">
+                                                                    <div class="feature-items-view box-view rounded-3 d-flex justify-content-center align-items-center">
+                                                                        <a class="product-link itemQuickView" href="javascript:void(0);" data-link="" rel="nofollow noindex" data-toggle="tooltip" data-placement="bottom" title="" style="" tabindex="-1" data-original-title="Quick view">
+                                                                            <i class="far fa-eye"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="feature-items-wishlist box-change rounded-3 d-flex justify-content-center align-items-center">
+                                                                        <a href="javascript:void(0);" class="product-link add-to-product-compare" data-link="" data-toggle="tooltip" data-placement="bottom" title="" style="height: 90%;" tabindex="-1" data-original-title="Add to compare">
+                                                                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                                                                                <!--! Font Awesome Free 6.4.0 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                                                <style>svg{fill:#333e48}</style>
+                                                                                <path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="feature-items-wishlist box-wishlist rounded-3 d-flex justify-content-center align-items-center">
+                                                                        <a href="javascript:void(0);" data-link="" class="add-to-wishlist" data-toggle="tooltip" data-placement="bottom" title="" style="" tabindex="-1" data-original-title="Add to wishlist">
+                                                                            <i class="far fa-heart"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- floating when hover -->
+                                                                <div class="box-action d-flex flex-column px-4 slideInUp">
+                                                                    <div class="box-action-price d-flex flex-row">
+                                                                        <p class="feature-items-price-new box-price-new mt-0 mb-2">
+                                                                            <t t-esc="'$'+product.price_new"/>
+                                                                        </p>
+                                                                        <p class="feature-items-price-old box-price-old m-0 mb-2">
+                                                                            <t t-esc="'$'+product.price_old"/>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="feature-items-wishlist box-cart w-100 d-flex justify-content-center align-items-center">
+                                                                        <a data-link="" class="btn-primary text-center sc-add-to-cart d-flex justify-content-center align-items-center rounded-3" tabindex="-1" style="cursor: pointer;">
+                                                                            <i class="fas fa-shopping-cart me-3"></i>
+                                                                            <span class="d-none d-sm-inline-block ml-2">Add to Cart</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- loop end -->
+                                                        </t>
+                                                        <!-- /.box-inner -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.recent-inner -->
+                        </div>
+                        <!-- Feathered flash deal start -->
+                        <div class="flash-deal-product-main">
+                            <div class="row justify-content-center">
+                                <t t-foreach="this.upsaleProducts" t-as="product" t-key="product.id">
+                                    <div class="col-12 col-md-6 col-sm-9 my-3">
+                                        <div class="flash-deal-product" style="margin-top: 0">
+                                            <div class="flash-deal-product-inner">
+                                                <div class="flash-deal-product-view">
+                                                    <a class="flash-deal-product-name" href="">
+                                                    Sed dolorem dolor occaecati.
+                                                    </a>
+                                                    <div class="flash-deal-product-image">
+                                                        <div class="flash-deal-product-badge">
+                                                            <span>New</span>
+                                                        </div>
+                                                        <a href="">
+                                                            <img class="" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" alt="" title=""/>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="flash-deal-product-details">
+                                                    <div class="flash-deal-product-price">
+                                                        <p class="feature-items-price-new box-price-new m-0 me-3">
+                                                            <t t-esc="'$'+product.price_new"/>
+                                                        </p>
+                                                        <p class="feature-items-price-old box-price-old ">
+                                                            <t t-esc="'$'+product.price_old"/>
+                                                        </p>
+                                                        <span class="offer ml-3">
+                                                        42% Off</span>
+                                                    </div>
+                                                    <!-- /.flash-deal-product-price -->
+                                                    <div class="flash-deal-product-description">
+                                                        <p>Ut enim nostrum rem voluptas. Nobis quae nobis rerum asperiores quae. Consequatur voluptatem odit alias nisi illum cupiditate incidunt aut. Rerum dolores voluptatum odit. Excepturi et sapiente aut repellendus qui officia in. Qui aut aut et officia eos rerum maxime. Dicta asperiores vero adipisci. Recusandae voluptatum voluptatem ipsam perferendis ea voluptatem mollitia. Debitis non repudiandae incidunt. Quasi atque in voluptatem non. Provident eius repellat omnis aut nam. Facere velit reprehenderit consequatur et. Ratione voluptatem sequi rem dicta accusamus odit. Inventore animi molestiae veniam atque velit ut. Voluptatem aut est temporibus ut delectus laborum. Odio inventore esse est et fugiat eos voluptatem laborum. Excepturi molestiae et et vel. Omnis eum non et recusandae. Accusamus atque voluptatem consequatur quod modi autem. Sequi voluptate magni nihil nulla molestiae qui. Quo nostrum eum facilis dolor molestiae a. Qui cupiditate voluptatibus debitis ducimus voluptate. Cupiditate cum laudantium eum omnis reprehenderit ea nihil dignissimos. Qui enim omnis necessitatibus exercitationem voluptatem et. Omnis eaque eius asperiores officia. Nihil dolorem sunt voluptates et reprehenderit laudantium. In id in error.</p>
+                                                    </div>
+                                                    <div class="flash-deal-product-rating">
+                                                        <ul>
+                                                            <t t-foreach="this.generateStars(product.rating)" t-as="star" t-key="star.index">
+                                                                <li>
+                                                                    <a href="#" tabindex="-1">
+                                                                        <i t-att-class="star.type"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </t>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="flash-deal-product-availability">
+                                                        <span>Availability:</span>
+                                                        <p>
+                                                            <t t-esc="product.inStock"/> In Stock
+                                                        </p>
+                                                    </div>
+                                                    <div class="flash-deal-product-sell-time">
+                                                        <h3>
+                                                            <span class="deal-counter-days">
+                                                                <t t-esc="this.timeRemaining.days"/>
+                                                            </span> days :
+                                                            <span class="deal-counter-hours">
+                                                                <t t-esc="this.timeRemaining.hours"/>
+                                                            </span> hrs :
+                                                            <span class="deal-counter-minutes">
+                                                                <t t-esc="this.timeRemaining.minutes"/>
+                                                            </span> mins :
+                                                            <span class="deal-counter-seconds">
+                                                                <t t-esc="this.timeRemaining.seconds"/>
+                                                            </span> sec
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <!-- /.flash-deal-product-details -->
+                                                <div class="flash-deal-product-utility">
+                                                    <a class="button product-link itemQuickView" href="javascript:void(0);" data-link="" rel="nofollow noindex" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Quick view">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="button product-link add-to-product-compare" data-link="" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to compare">
+                                                        <i class="fas fa-balance-scale"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);" data-link="" class="button add-to-wishlist" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to wishlist">
+                                                        <i class="fas fa-heart"></i>
+                                                    </a>
+                                                    <a data-link="" class="button button-cart btn-primary sc-add-to-cart px-4" data-toggle="tooltip" data-placement="top" title="" style="cursor: pointer;" data-original-title="Add to Cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                        <span class="d-sm-none">Add to Cart</span>
+                                                    </a>
+                                                </div>
+                                                <!-- /.flash-deal-product-utility -->
+                                            </div>
+                                            <!-- Product inner End-->
+                                        </div>
+                                        <!-- Product End-->
+                                    </div>
+                                    <!-- /.col-12 -->
+                                </t>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- Feathered flash deal end -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </t>
+</templates>
