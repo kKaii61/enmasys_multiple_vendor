@@ -13,43 +13,43 @@
                         <nav class="mainmenu-nav">
                             <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                 <li>
-                                    <a href="#" data-action="dashboard" t-on-click="() => { handleTabClick('dashboard', '/dashboard'); }">
+                                    <a href="#" data-action="dashboard" t-on-click="() => { handleTabClick('dashboard', 'instructor-dashboard.html'); }">
                                         <i class="feather-home"></i>
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="profile" t-on-click="() => { handleTabClick('profile', '/profile'); }">
+                                    <a href="#" data-action="profile" t-on-click="() => { handleTabClick('profile', 'instructor-profile.html'); }">
                                         <i class="feather-user"></i>
                                         <span>My Profile</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="enrolled_courses" t-on-click="() => { handleTabClick('enrolled_courses', '/enrolled-courses'); }">
+                                    <a href="#" data-action="enrolled_courses" t-on-click="() => { handleTabClick('enrolled_courses', 'instructor-enrolled-courses.html'); }">
                                         <i class="feather-book-open"></i>
                                         <span>Enrolled Courses</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="wishlist" t-on-click="() => { handleTabClick('wishlist', '/wishlist'); }">
+                                    <a href="#" data-action="wishlist" t-on-click="() => { handleTabClick('wishlist', 'instructor-wishlist.html'); }">
                                         <i class="feather-bookmark"></i>
                                         <span>Wishlist</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="reviews" t-on-click="() => { handleTabClick('reviews', '/reviews'); }">
+                                    <a href="#" data-action="reviews" t-on-click="() => { handleTabClick('reviews', 'instructor-reviews.html'); }">
                                         <i class="feather-star"></i>
                                         <span>Reviews</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="my_quiz_attempts" t-on-click="() => { handleTabClick('my_quiz_attempts', '/my-quiz-attempts'); }">
+                                    <a href="#" data-action="my_quiz_attempts" t-on-click="() => { handleTabClick('my_quiz_attempts', 'instructor-my-quiz-attempts.html'); }">
                                         <i class="feather-help-circle"></i>
                                         <span>My Quiz Attempts</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="orderhistory" t-on-click="() => { handleTabClick('orderhistory', '/order-history'); }">
+                                    <a href="#" data-action="orderhistory" t-on-click="() => { handleTabClick('orderhistory', 'instructor-order-history.html'); }">
                                         <i class="feather-shopping-bag"></i>
                                         <span>Order History</span>
                                     </a>
@@ -63,25 +63,25 @@
                         <nav class="mainmenu-nav">
                             <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                 <li>
-                                    <a href="#" data-action="courses" t-on-click="() => { handleTabClick('courses', '/courses'); }">
+                                    <a href="#" data-action="courses" t-on-click="() => { handleTabClick('courses', 'instructor-course.html'); }">
                                         <i class="feather-monitor"></i>
                                         <span>My Courses</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="announcements" t-on-click="() => { handleTabClick('announcements', '/announcements'); }">
+                                    <a href="#" data-action="announcements" t-on-click="() => { handleTabClick('announcements', 'instructor-announcements.html'); }">
                                         <i class="feather-volume-2"></i>
                                         <span>Announcements</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="quiz_attempts" t-on-click="() => { handleTabClick('quiz_attempts', '/quiz-attempts'); }">
+                                    <a href="#" data-action="quiz_attempts" t-on-click="() => { handleTabClick('quiz_attempts', 'instructor-quiz-attempts.html'); }">
                                         <i class="feather-message-square"></i>
                                         <span>Quiz Attempts</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-action="assignments" t-on-click="() => { handleTabClick('assignments', '/assignments'); }">
+                                    <a href="#" data-action="assignments" t-on-click="() => { handleTabClick('assignments', 'instructor-assignments.html'); }">
                                         <i class="feather-list"></i>
                                         <span>Assignments</span>
                                     </a>
@@ -95,7 +95,7 @@
                         <nav class="mainmenu-nav">
                             <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                 <li>
-                                    <a href="#" data-action="settings" t-on-click="() => { handleTabClick('setting', '/settings'); }">
+                                    <a href="#" data-action="settings" t-on-click="() => { handleTabClick('setting', 'instructor-settings.html'); }">
                                         <i class="feather-settings"></i>
                                         <span>Settings</span>
                                     </a>

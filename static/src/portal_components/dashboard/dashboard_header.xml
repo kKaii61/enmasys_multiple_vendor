@@ -8,7 +8,7 @@
             <div class="rbt-tutor-information">
                 <div class="rbt-tutor-information-left">
                     <div class="thumbnail rbt-avatars size-lg">
-                        <img src="\enmasys_multiple_vendor\static\images\team\avatar.jpg" alt="Instructor" />
+                        <img src="/enmasys_multiple_vendor/static/images/team/avatar.jpg" alt="Instructor" />
                     </div>
                     <div class="tutor-content">
                         <h5 class="title">John Due</h5>
