@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="enmasys_multiple_vendor.CategoriesBanner">
+        <section>
+            <!-- /.ei-slider -->
+            <div id="ei-slider" class="ei-slider">
+                <div class="ei-slider-loading" style="display: block;">Loading</div>
+                <ul class="ei-slider-large p-0 w-100">
+                    <t t-foreach="this.categories" t-as="category" t-key="category.id">
+                        <li
+                         t-ref="{{category.id}}"
+                          style="opacity: 0; z-index: 1;">
+                            <a href="/category/">
+                                <img class="responsive" style="min-height:350px;" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '.png'" data-src="" alt=""/>
+                            </a>
+                        </li>
+                    </t>
+                </ul>
+                <!-- ei-slider-large -->
+                <ul class="ei-slider-thumbs" style="max-width: 600px; z-index: 5">
+                    <li class="ei-slider-element" t-ref="sliderElement" style="color: transparent;max-width: 150px; width: 25%; left: 0px;">Current</li>
+                    <t t-foreach="this.categories" t-as="category" t-key="category.id">
+                        <li  style="max-width: 150px; width: 25%;">
+                            <a t-on-click="() => this.changeSlide(category.id)" href="javascript:void(0);">
+                                Slide
+                                <span t-esc="category.id"/>
+                            </a>
+                            <img class="thumb-img position-absolute" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '_thumb.png'" data-src="" t-att-alt="'thumbnail ' + category.id"/>
+                        </li>
+                    </t>
+                </ul>
+            </div>
+            <!-- /.ei-slider -->
+        </section>
+    </t>
+</templates>

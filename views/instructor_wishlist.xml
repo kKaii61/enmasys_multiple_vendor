@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="multiple_vendor_wishlist" inherit_id="website.layout" name="Multiple profile Layout">
+        <!-- Ghi đè phần tử header -->
+        <xpath expr="//div[@id='wrapwrap']/main" position="inside">
+            <owl-component name="enmasys_multiple_vendor.WishlistComponent" owl="1"/>
+        </xpath>
+    </template>
+</odoo>

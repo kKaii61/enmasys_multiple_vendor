@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="enmasys_multiple_vendor.DashboardSidebar">
+        <!-- Start Dashboard Sidebar  -->
+        <div class="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+            <div class="inner">
+                <div class="content-item-content">
+                    <div class="rbt-default-sidebar-wrapper">
+                        <!-- Student Section -->
+                        <div class="section-title mb--20">
+                            <h6 class="rbt-title-style-2">Welcome, Jone Due</h6>
+                        </div>
+                        <nav class="mainmenu-nav">
+                            <ul class="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                    <a href="#" data-action="dashboard" t-on-click="() => { handleTabClick('dashboard', '/dashboard'); }">
+                                        <i class="feather-home"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="profile" t-on-click="() => { handleTabClick('profile', '/profile'); }">
+                                        <i class="feather-user"></i>
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="enrolled_courses" t-on-click="() => { handleTabClick('enrolled_courses', '/enrolled-courses'); }">
+                                        <i class="feather-book-open"></i>
+                                        <span>Enrolled Courses</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="wishlist" t-on-click="() => { handleTabClick('wishlist', '/wishlist'); }">
+                                        <i class="feather-bookmark"></i>
+                                        <span>Wishlist</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="reviews" t-on-click="() => { handleTabClick('reviews', '/reviews'); }">
+                                        <i class="feather-star"></i>
+                                        <span>Reviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="my_quiz_attempts" t-on-click="() => { handleTabClick('my_quiz_attempts', '/my-quiz-attempts'); }">
+                                        <i class="feather-help-circle"></i>
+                                        <span>My Quiz Attempts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="orderhistory" t-on-click="() => { handleTabClick('orderhistory', '/order-history'); }">
+                                        <i class="feather-shopping-bag"></i>
+                                        <span>Order History</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Instructor Section -->
+                        <div class="section-title mt--40 mb--20">
+                            <h6 class="rbt-title-style-2">Instructor</h6>
+                        </div>
+                        <nav class="mainmenu-nav">
+                            <ul class="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                    <a href="#" data-action="courses" t-on-click="() => { handleTabClick('courses', '/courses'); }">
+                                        <i class="feather-monitor"></i>
+                                        <span>My Courses</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="announcements" t-on-click="() => { handleTabClick('announcements', '/announcements'); }">
+                                        <i class="feather-volume-2"></i>
+                                        <span>Announcements</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="quiz_attempts" t-on-click="() => { handleTabClick('quiz_attempts', '/quiz-attempts'); }">
+                                        <i class="feather-message-square"></i>
+                                        <span>Quiz Attempts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-action="assignments" t-on-click="() => { handleTabClick('assignments', '/assignments'); }">
+                                        <i class="feather-list"></i>
+                                        <span>Assignments</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- User Section -->
+                        <div class="section-title mt--40 mb--20">
+                            <h6 class="rbt-title-style-2">User</h6>
+                        </div>
+                        <nav class="mainmenu-nav">
+                            <ul class="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                    <a href="#" data-action="settings" t-on-click="() => { handleTabClick('setting', '/settings'); }">
+                                        <i class="feather-settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html" data-action="logout">
+                                        <i class="feather-log-out"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
