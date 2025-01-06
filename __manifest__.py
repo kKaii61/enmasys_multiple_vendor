@@ -211,6 +211,10 @@
             # Profile Components
             'enmasys_multiple_vendor/static/src/portal_components/profile/*',
 
+
+            # Shop Body
+            'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop/*',
+            
             # Shop Body Components
             'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_categories/*',
             'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_block_banner/*',

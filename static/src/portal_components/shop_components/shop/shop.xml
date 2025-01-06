@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="enmasys_multiple_vendor.Shop">
+        <section class="shop_tempate">
+            <CategoriesBanner/>
+            <BlockBanner/>
+            <FeaturedCategories/>
+            <FlashDeal/>
+        </section>
+    </t>
+</templates>
