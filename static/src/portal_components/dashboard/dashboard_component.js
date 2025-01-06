@@ -47,7 +47,7 @@ export class DashboardComponent extends Component {
       wishlist: WishlistComponent,
       reviews: ReviewComponent,
       my_quiz_attempts: MyquizattemptsComponent,
-      orderhistory: OrderhistoryComponent,
+      order_history: OrderhistoryComponent,
       courses: CoursesComponent,
       announcements: AnnouncementsComponent,
       quiz_attempts: QuizattemptsComponent,
