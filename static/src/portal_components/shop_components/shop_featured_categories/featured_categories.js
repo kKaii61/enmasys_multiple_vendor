@@ -2,6 +2,7 @@
 import { Component, useState, useRef, onMounted } from "@odoo/owl";
 import { registry } from "@web/core/registry"
 
+// Default Postion for slider
 const defaultPos = -1240;
 export class FeaturedCategories extends Component {
     static template = "enmasys_multiple_vendor.FeaturedCategories";

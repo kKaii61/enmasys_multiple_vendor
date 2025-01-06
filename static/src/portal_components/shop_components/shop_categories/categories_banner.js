@@ -7,6 +7,7 @@ export class CategoriesBanner extends Component {
 
     setup() {
         // Maximum 4 banner show
+        // Will try to make it adaptable
         this.categories = useState([
             { id: 0, img: "accessory" },
             { id: 1, img: "bike" },

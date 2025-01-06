@@ -1,22 +1,20 @@
+// Custom Properties
 :root {
     --color-gray-secondary: rgb(213, 216, 218);
 }
 
 
-//
-
+// Direct Styles
 .featured-categories {
     height: 100%;
     overflow-x: clip;
     z-index: 1;
 }
-
 .owl-stage-outer {
     position: relative;
     height: 202px !important;
     z-index: 0;
 }
-
 .owl-stage {
     position: absolute;
     // overflow: hidden;
@@ -31,9 +29,6 @@
 }
 
 // Reused Styles
-.container {
-    margin: 0 0.5rem;
-}
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -175,4 +170,4 @@ button.owl-next {
     transform: translate(30%, -200%);
 }
 
-//
+//// END
