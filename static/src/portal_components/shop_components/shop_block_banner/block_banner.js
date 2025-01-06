@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry"
 export class BlockBanner extends Component {
     static template = "enmasys_multiple_vendor.BlockBanner";
     static props = {};
-
+    
     setup() {
         this.products = useState([
             { id: 0, imgName: "1.png" },

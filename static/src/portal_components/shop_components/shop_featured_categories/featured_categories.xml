@@ -17,8 +17,6 @@
                 <!-- /.sell-header -->
                 <div id="owl-container" class="featured-categories owl-carousel ol-theme owl-loaded owl-drag">
                     <!-- /.featured-category -->
-                    <!-- /.featured-category -->
-                    <!-- /.featured-category -->
                     <div class="owl-stage-outer owl-height"
                     t-on-mousemove="(e)=>this.handleMouseMove(e, this.sliderRef.el)"
                     t-on-mousedown="(e)=>this.handleMouseDown(e,this.sliderRef.el)"
