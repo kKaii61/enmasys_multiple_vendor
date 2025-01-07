@@ -51,20 +51,23 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- END SELL HEADER --> 
+                            <!-- END SELL HEADER -->
                             <div class="flashdeal mb-3">
                                 <div class="recent-inner">
                                     <div class="recent-items">
                                         <div class="flashdeal-items-inner slick-initialized slick-slider" style="display: block;">
                                             <div class="slick-list draggable">
-                                                <div class="slick-track" style="">
+                                                <div class="slick-track" style=""
+                                                    t-on-mousemove="(e)=>this.handleMouseMove(e, this.sliderRef.el)"
+                                                    t-on-mousedown="(e)=>this.handleMouseDown(e,this.sliderRef.el)"
+                                                    t-on-mouseup="(e)=>this.handleMouseUp(e,this.sliderRef.el)">
                                                     <div
-                                                    t-ref="sliderRef"
-                                                    t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'"
-                                                     class="items-slider box border-animate slick-slide slick-cloned d-flex flex-nowrap" data-slick-index="" aria-hidden="true" tabindex="-1">
+                                                        t-ref="sliderRef"
+                                                        t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'"
+                                                        class="items-slider box border-animate slick-slide slick-cloned d-flex flex-nowrap" data-slick-index="" aria-hidden="true" tabindex="-1">
                                                         <t t-foreach="this.products" t-as="product" t-key="product.id">
                                                             <!-- loop start -->
-                                                            <div class="box-inner position-relative col-2">
+                                                            <div class="box-inner position-relative col-1">
                                                                 <a href="" tabindex="-1">
                                                                     <div class="recent-items-img box-img">
                                                                         <img class="lazy" style="width: 100%; max-height:183px; object-fit: cover;" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" t-att-alt="product.name + '.'" t-att-title="product.name + '.'"/>

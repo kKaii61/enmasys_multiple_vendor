@@ -1,5 +1,5 @@
 /** @odoo-module **/
-import { Component, useState, useRef, onWillUnmount } from "@odoo/owl";
+import { Component, useState, useRef, onWillUnmount, onMounted } from "@odoo/owl";
 import { registry } from "@web/core/registry"
 
 const defaultPos = 0;
@@ -19,6 +19,9 @@ export class FlashDeal extends Component {
             { id: 6, name: "Earings", price_old: "12.000", price_new: "10.999", rating: '2', img: 'earings' },
             { id: 7, name: "Makeup Box", price_old: "300", price_new: "250", rating: '0', img: 'makeup' },
             { id: 8, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
+            { id: 9, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
+            { id: 10, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
+            { id: 11, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
         ]);
         this.upsaleProducts = useState([
             { id: 0, name: "Makeup Box", price_old: "381.77", price_new: "195.77", rating: '0', inStock: 23, img: 'makeup' },
@@ -40,11 +43,14 @@ export class FlashDeal extends Component {
         // Set day til now to 7 days
         // this.endDate = new Date();
         // this.endDate.setDate(this.endDate.getDate() + 7);
-        // Or just set a specific date
+        // Or just set a specific datehttps://shopee.vn/m/tet-sieu-sale
         this.endDate = new Date("2024-12-31");
         this.startTimer();
+        onMounted(() => { this.snapToItem()});
         onWillUnmount(() => this.stopTimer());
     }
+
+    // Render Rating Stars
     generateStars(rating) {
         const stars = [];
         for (let i = 0; i < 5; i++) {
@@ -74,10 +80,47 @@ export class FlashDeal extends Component {
             }
         }, 1000);
     }
-
     // Stop the timer
     stopTimer() {
         clearInterval(this.timer);
+    }
+    // *******  Dragging Functions  ********* \\
+
+    // onMouseDown listener
+    handleMouseDown(e, el) {
+        e.preventDefault();
+        this.pos3.value = e.clientX; // Save current X position on e
+        window.addEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        window.addEventListener("mouseup", (event) => this.handleMouseUp(event, el));
+    }
+    // onMouseMove listener
+    handleMouseMove(e, el) {
+        e.preventDefault();
+        if (e.buttons !== 1) return; // Only drag when left mouse button is pressed
+        const slider = el;
+        if (!slider) return; // return on null
+        slider.style.transition = "none"; // Dragging don't have transition
+        this.pos1.value = this.pos3.value - e.clientX;
+        this.pos3.value = e.clientX;
+        const deltaX = (this.leftVal.value - this.pos1.value);
+        this.leftVal.value = deltaX;
+    };
+    // remove eventlistener on mouse up
+    handleMouseUp(e, el) {
+        e.preventDefault();
+        const slider = el;
+        this.snapToItem();
+        window.removeEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        window.removeEventListener("mouseup", (event) => this.handleMouseUp(event, el));
+        slider.style.transition = "all 0.5s ease-in-out";
+    }
+
+    snapToItem() {
+        const slider = this.sliderRef.el;
+        const itemWidth = slider.children[0].offsetWidth;
+        const snapIndex = Math.round(this.leftVal.value / itemWidth);
+        this.leftVal.value = snapIndex * itemWidth;
+        slider.style.transform = `translateX(${this.leftVal.value}px)`;
     }
 }
 registry.category("public_components").add("enmasys_multiple_vendor.FlashDeal", FlashDeal);
