@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="enmasys_multiple_vendor.Shop">
-        <section class="shop_tempate">
-            <CategoriesBanner/>
-            <BlockBanner/>
-            <FeaturedCategories/>
-            <FlashDeal/>
+        <section class="shop_template">
+            <t t-if="this.state.currentView == null">
+                <CategoriesBanner/>
+                <BlockBanner/>
+                <FeaturedCategories/>
+                <FlashDeal/>
+            </t>
+            <t t-else="">
+                <t t-component="getComponent"/>
+            </t>
+            <!-- <t t-component="this.components['block_banner']" /> -->
         </section>
     </t>
 </templates>
