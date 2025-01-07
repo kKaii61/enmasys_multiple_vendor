@@ -9,4 +9,13 @@
             </main>
         </t>
     </template>
+    <template id="multiple_vendor_shop_component" name="Shop Component Test">
+        <t t-call="website.layout">
+            <main class="main">
+                <div id="wrap">
+                    <owl-component name="enmasys_multiple_vendor.Shop" owl="1"/>
+                </div>
+            </main>
+        </t>
+    </template>
 </odoo>
