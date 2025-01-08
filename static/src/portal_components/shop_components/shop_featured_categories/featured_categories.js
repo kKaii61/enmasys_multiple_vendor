@@ -103,7 +103,7 @@ export class FeaturedCategories extends Component {
 
         this.limitCheck();
 
-        window.addEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        // window.addEventListener("mousemove", (event) => this.handleMouseMove(event, el));
         window.addEventListener("mouseup", (event) => this.handleMouseUp(event, el));
     }
     // onMouseMove listener
@@ -130,9 +130,8 @@ export class FeaturedCategories extends Component {
         this.snapToItem();
 
         this.resetInterval();
-        window.removeEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        // window.removeEventListener("mousemove", (event) => this.handleMouseMove(event, el));
         window.removeEventListener("mouseup", (event) => this.handleMouseUp(event, el));
-
         slider.style.transition = "all 0.5s ease-in-out";
     }
 
