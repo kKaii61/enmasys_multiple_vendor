@@ -156,18 +156,16 @@
                                     <div class="col-12 col-md-6 col-sm-9 my-3">
                                         <div class="flash-deal-product" style="margin-top: 0">
                                             <div class="flash-deal-product-inner">
-                                                <div class="flash-deal-product-view">
-                                                    <a class="flash-deal-product-name" href="">
+                                                <a class="flash-deal-product-name" href="">
                                                     Sed dolorem dolor occaecati.
-                                                    </a>
-                                                    <div class="flash-deal-product-image">
-                                                        <div class="flash-deal-product-badge">
-                                                            <span>New</span>
-                                                        </div>
-                                                        <a href="">
-                                                            <img class="" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" alt="" title=""/>
-                                                        </a>
+                                                </a>
+                                                <div class="flash-deal-product-image">
+                                                    <div class="flash-deal-product-badge">
+                                                        <span>New</span>
                                                     </div>
+                                                    <a href="">
+                                                        <img class="" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" alt="" title=""/>
+                                                    </a>
                                                 </div>
                                                 <div class="flash-deal-product-details">
                                                     <div class="flash-deal-product-price">

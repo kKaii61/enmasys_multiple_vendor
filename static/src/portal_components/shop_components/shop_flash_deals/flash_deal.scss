@@ -217,24 +217,43 @@
 // Flash deal product \\
 .flash-deal-product {
     border: 2px solid var(--color-primary);
-    
 }
 
-.flash-deal-product-view{
-    display: block;
-    width: 50%;
-}
 
+.flash-deal-product-inner {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flash-deal-product-name {
+    flex: 1 100%;
+    order: 1;
+}
+.flash-deal-product-image {
+    width: 250px;
+    min-width: 250px;
+    height: auto;
+    order: 2;
+}
 .flash-deal-product-details {
     display: block;
     width: 50%;
+    order: 3;
+
+    .flash-deal-product-price {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.flash-deal-product-image {
-    height: 100%;
+.flash-deal-product-utility {
+    order: 4;
 }
 
-
+.flash-deal-product-description p {
+    height: 78px;
+    overflow: hidden;
+    text-align: justify;
+}
 
 .flash-deal-product-rating {
     display: flex;
