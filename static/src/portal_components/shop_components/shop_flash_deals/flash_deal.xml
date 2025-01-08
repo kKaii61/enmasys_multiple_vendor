@@ -62,7 +62,7 @@
                                                     t-on-mousedown="(e)=>this.handleMouseDown(e,this.sliderRef.el)"
                                                     t-on-mouseup="(e)=>this.handleMouseUp(e,this.sliderRef.el)">
                                                     <div
-                                                        t-ref="sliderRef"
+                                                        t-ref="slick"
                                                         t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'"
                                                         class="items-slider box border-animate slick-slide slick-cloned d-flex flex-nowrap" data-slick-index="" aria-hidden="true" tabindex="-1">
                                                         <t t-foreach="this.products" t-as="product" t-key="product.id">

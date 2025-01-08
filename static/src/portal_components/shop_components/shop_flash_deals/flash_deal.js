@@ -38,7 +38,7 @@ export class FlashDeal extends Component {
         this.leftVal = useState({ value: defaultPos });
         this.pos1 = useState({ value: 0 });
         this.pos3 = useState({ value: 0 });
-        this.sliderRef = useRef("sliderRef");
+        this.sliderRef = useRef("slick");
 
         // Set day til now to 7 days
         // this.endDate = new Date();
@@ -90,7 +90,7 @@ export class FlashDeal extends Component {
     handleMouseDown(e, el) {
         e.preventDefault();
         this.pos3.value = e.clientX; // Save current X position on e
-        window.addEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        // window.addEventListener("mousemove", (event) => this.handleMouseMove(event, el));
         window.addEventListener("mouseup", (event) => this.handleMouseUp(event, el));
     }
     // onMouseMove listener
@@ -110,7 +110,7 @@ export class FlashDeal extends Component {
         e.preventDefault();
         const slider = el;
         this.snapToItem();
-        window.removeEventListener("mousemove", (event) => this.handleMouseMove(event, el));
+        // window.removeEventListener("mousemove", (event) => this.handleMouseMove(event, el));
         window.removeEventListener("mouseup", (event) => this.handleMouseUp(event, el));
         slider.style.transition = "all 0.5s ease-in-out";
     }
