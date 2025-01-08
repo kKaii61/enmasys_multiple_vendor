@@ -98,6 +98,7 @@ export class FlashDeal extends Component {
         if (e.buttons !== 1) return; // Only drag when left mouse button is pressed
         const slider = el;
         if (!slider) return; // return on null
+        slider.style.transition = "none";
         this.pos1.value = this.pos3.value - e.clientX;
         this.pos3.value = e.clientX;
         const deltaX = (this.leftVal.value - this.pos1.value);
