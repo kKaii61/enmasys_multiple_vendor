@@ -85,7 +85,6 @@ export class FlashDeal extends Component {
         clearInterval(this.timer);
     }
     // *******  Dragging Functions  ********* \\
-
     // onMouseDown listener
     handleMouseDown(e, el) {
         e.preventDefault();
@@ -99,7 +98,6 @@ export class FlashDeal extends Component {
         if (e.buttons !== 1) return; // Only drag when left mouse button is pressed
         const slider = el;
         if (!slider) return; // return on null
-        slider.style.transition = "none"; // Dragging don't have transition
         this.pos1.value = this.pos3.value - e.clientX;
         this.pos3.value = e.clientX;
         const deltaX = (this.leftVal.value - this.pos1.value);
@@ -114,12 +112,24 @@ export class FlashDeal extends Component {
         window.removeEventListener("mouseup", (event) => this.handleMouseUp(event, el));
         slider.style.transition = "all 0.5s ease-in-out";
     }
-
+    /** end */
+    nextItem() {
+        const slider = this.sliderRef.el;
+        this.leftVal.value -= slider.children[0].offsetWidth * 6; // Adjust for the sliding distance equal to width of 6 items
+        slider.style.transform = `translateX(${this.leftVal.value}px)`;
+        this.snapToItem();
+    }
+    prevItem() {
+        const slider = this.sliderRef.el;
+        this.leftVal.value += slider.children[0].offsetWidth * 6; // Adjust for the sliding distance equal to width of 6 items
+        slider.style.transform = `translateX(${this.leftVal.value}px)`;
+        this.snapToItem();
+    }
     snapToItem() {
         const slider = this.sliderRef.el;
-        const itemWidth = slider.children[0].offsetWidth;
-        const snapIndex = Math.round(this.leftVal.value / itemWidth);
-        this.leftVal.value = snapIndex * itemWidth;
+        const contentWidth = slider.children[0].offsetWidth * 6;
+        const snapIndex = Math.round( ((this.leftVal.value - 150) / contentWidth));
+        this.leftVal.value = snapIndex * contentWidth;
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
     }
 }

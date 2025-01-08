@@ -39,12 +39,12 @@
                                 <div class="best-deal-arrow d-flex justify-content-end gap-2">
                                     <ul>
                                         <li>
-                                            <button class="left-arrow slider-arrow flashdeal-left slick-arrow rounded-circle" style="">
+                                            <button t-on-click="prevItem" class="left-arrow slider-arrow flashdeal-left slick-arrow rounded-circle" style="">
                                                 <i class="fas fa-chevron-left btn-icon p-3"></i>
                                             </button>
                                         </li>
                                         <li>
-                                            <button class="right-arrow slider-arrow flashdeal-right slick-arrow rounded-circle" style="">
+                                            <button t-on-click="nextItem" class="right-arrow slider-arrow flashdeal-right slick-arrow rounded-circle" style="">
                                                 <i class="fas fa-chevron-right btn-icon p-3"></i>
                                             </button>
                                         </li>
@@ -63,11 +63,11 @@
                                                     t-on-mouseup="(e)=>this.handleMouseUp(e,this.sliderRef.el)">
                                                     <div
                                                         t-ref="slick"
-                                                        t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px);'"
+                                                        t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px); transition: all 0.5s ease-in-out'"
                                                         class="items-slider box border-animate slick-slide slick-cloned d-flex flex-nowrap" data-slick-index="" aria-hidden="true" tabindex="-1">
                                                         <t t-foreach="this.products" t-as="product" t-key="product.id">
                                                             <!-- loop start -->
-                                                            <div class="box-inner position-relative col-1">
+                                                            <div class="box-inner position-relative col-1" style="width: calc(98vw / 6);">
                                                                 <a href="" tabindex="-1">
                                                                     <div class="recent-items-img box-img">
                                                                         <img class="lazy" style="width: 100%; max-height:183px; object-fit: cover;" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_flashdeal/'+product.img+'.png'" data-src="" data-name="product_image" t-att-alt="product.name + '.'" t-att-title="product.name + '.'"/>
