@@ -54,6 +54,14 @@ class Shop extends Component {
     }
 
     //**
+    /* This function check current path starts with `/shop/`
+    /* and capture dynamic parameters after it, then render the corresponding component.
+    */
+    checkValidView() {
+        // if(this.initialView.match)
+    }
+
+    //**
     /* This function mapped from the `components` class property and-
     /* grant it to this.mappedComponents
     */
