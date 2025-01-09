@@ -43,8 +43,8 @@ export class FlashDeal extends Component {
         // Set day til now to 7 days
         // this.endDate = new Date();
         // this.endDate.setDate(this.endDate.getDate() + 7);
-        // Or just set a specific datehttps://shopee.vn/m/tet-sieu-sale
-        this.endDate = new Date("2024-12-31");
+        // Or just set a specific date
+        this.endDate = new Date("2025-1-10");
         this.startTimer();
         onMounted(() => { this.snapToItem()});
         onWillUnmount(() => this.stopTimer());
@@ -129,7 +129,7 @@ export class FlashDeal extends Component {
     snapToItem() {
         const slider = this.sliderRef.el;
         const contentWidth = slider.children[0].offsetWidth * 6;
-        const snapIndex = Math.round( ((this.leftVal.value - 150) / contentWidth));
+        const snapIndex = Math.round(((this.leftVal.value) / contentWidth));
         this.leftVal.value = snapIndex * contentWidth;
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
     }
