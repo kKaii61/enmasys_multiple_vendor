@@ -175,7 +175,7 @@
                                                         <p class="feature-items-price-old box-price-old ">
                                                             <t t-esc="'$'+product.price_old"/>
                                                         </p>
-                                                        <span class="offer ml-3">
+                                                        <span class="offer ms-3 px-3 py-1 rounded">
                                                         42% Off</span>
                                                     </div>
                                                     <!-- /.flash-deal-product-price -->
@@ -183,7 +183,7 @@
                                                         <p>Ut enim nostrum rem voluptas. Nobis quae nobis rerum asperiores quae. Consequatur voluptatem odit alias nisi illum cupiditate incidunt aut. Rerum dolores voluptatum odit. Excepturi et sapiente aut repellendus qui officia in. Qui aut aut et officia eos rerum maxime. Dicta asperiores vero adipisci. Recusandae voluptatum voluptatem ipsam perferendis ea voluptatem mollitia. Debitis non repudiandae incidunt. Quasi atque in voluptatem non. Provident eius repellat omnis aut nam. Facere velit reprehenderit consequatur et. Ratione voluptatem sequi rem dicta accusamus odit. Inventore animi molestiae veniam atque velit ut. Voluptatem aut est temporibus ut delectus laborum. Odio inventore esse est et fugiat eos voluptatem laborum. Excepturi molestiae et et vel. Omnis eum non et recusandae. Accusamus atque voluptatem consequatur quod modi autem. Sequi voluptate magni nihil nulla molestiae qui. Quo nostrum eum facilis dolor molestiae a. Qui cupiditate voluptatibus debitis ducimus voluptate. Cupiditate cum laudantium eum omnis reprehenderit ea nihil dignissimos. Qui enim omnis necessitatibus exercitationem voluptatem et. Omnis eaque eius asperiores officia. Nihil dolorem sunt voluptates et reprehenderit laudantium. In id in error.</p>
                                                     </div>
                                                     <div class="flash-deal-product-rating">
-                                                        <ul>
+                                                        <ul class="gap-3 p-0 my-0">
                                                             <t t-foreach="this.generateStars(product.rating)" t-as="star" t-key="star.index">
                                                                 <li>
                                                                     <a href="#" tabindex="-1">
@@ -195,11 +195,11 @@
                                                     </div>
                                                     <div class="flash-deal-product-availability">
                                                         <span>Availability:</span>
-                                                        <p>
+                                                        <p class="ms-3">
                                                             <t t-esc="product.inStock"/> In Stock
                                                         </p>
                                                     </div>
-                                                    <div class="flash-deal-product-sell-time">
+                                                    <div class="flash-deal-product-sell-time rounded">
                                                         <h3>
                                                             <span class="deal-counter-days">
                                                                 <t t-esc="this.timeRemaining.days"/>
@@ -217,19 +217,19 @@
                                                     </div>
                                                 </div>
                                                 <!-- /.flash-deal-product-details -->
-                                                <div class="flash-deal-product-utility">
-                                                    <a class="button product-link itemQuickView" href="javascript:void(0);" data-link="" rel="nofollow noindex" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Quick view">
+                                                <div class="flash-deal-product-utility d-flex ms-3 mb-3 p-2 gap-4">
+                                                    <a class="button rounded p-3 bg-grey product-link itemQuickView" href="javascript:void(0);" data-link="" rel="nofollow noindex" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Quick view">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
-                                                    <a href="javascript:void(0);" class="button product-link add-to-product-compare" data-link="" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to compare">
+                                                    <a href="javascript:void(0);" class="button rounded p-3 bg-grey product-link add-to-product-compare" data-link="" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to compare">
                                                         <i class="fas fa-balance-scale"></i>
                                                     </a>
-                                                    <a href="javascript:void(0);" data-link="" class="button add-to-wishlist" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to wishlist">
+                                                    <a href="javascript:void(0);" data-link="" class="button rounded p-3 bg-grey add-to-wishlist" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to wishlist">
                                                         <i class="fas fa-heart"></i>
                                                     </a>
-                                                    <a data-link="" class="button button-cart btn-primary sc-add-to-cart px-4" data-toggle="tooltip" data-placement="top" title="" style="cursor: pointer;" data-original-title="Add to Cart">
+                                                    <a data-link="" class="button rounded button-cart btn-primary sc-add-to-cart px-4" data-toggle="tooltip" data-placement="top" title="" style="cursor: pointer;" data-original-title="Add to Cart">
                                                         <i class="fas fa-shopping-cart"></i>
-                                                        <span class="d-sm-none">Add to Cart</span>
+                                                        <span class="block">Add to Cart</span>
                                                     </a>
                                                 </div>
                                                 <!-- /.flash-deal-product-utility -->
