@@ -103,6 +103,7 @@
     opacity: 1;
     transition: opacity 0.2s ease-in;
 }
+
 .box-rating {
     display: flex;
 }
@@ -124,6 +125,7 @@
 .box-price {
     display: flex;
 }
+
 .box-price p {
     margin-bottom: 0;
 }
@@ -149,7 +151,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.box-inner:hover .box-action-vertical{
+.box-inner:hover .box-action-vertical {
     opacity: 1;
     transform: translate3d(-30%, 0, 0);
 }
@@ -193,6 +195,7 @@
 .box-inner:hover .box-action {
     transform: translate3d(0, 0, 0);
 }
+
 .box-inner:hover .box-title {
     opacity: 0;
 }
@@ -216,6 +219,7 @@
 
 // Flash deal product \\
 .flash-deal-product {
+    background: #fffff5;
     border: 2px solid var(--color-primary);
 }
 
@@ -224,16 +228,19 @@
     display: flex;
     flex-flow: row wrap;
 }
+
 .flash-deal-product-name {
     flex: 1 100%;
     order: 1;
 }
+
 .flash-deal-product-image {
     width: 250px;
     min-width: 250px;
     height: auto;
     order: 2;
 }
+
 .flash-deal-product-details {
     display: block;
     width: 50%;
@@ -241,28 +248,107 @@
 
     .flash-deal-product-price {
         display: flex;
-        flex-direction: row;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 10px 0px;
+    }
+
+    .flash-deal-product-price p {
+        height: fit-content;
+        margin-bottom: 0;
+    }
+
+    .offer {
+        background-color: red;
+        color: white;
+        align-self: baseline;
+        height: fit-content;
+    }
+
+    .flash-deal-product-availability {
+        display: flex;
+    }
+    .flash-deal-product-sell-time {
+        background: rgb(240,240,240);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+        
     }
 }
 
-.flash-deal-product-utility {
-    order: 4;
+.flash-deal-product-availability {
+    * {
+        font-size: 1.6rem;
+    }
+    p {
+        color: var(--color-black);
+    }
 }
 
 .flash-deal-product-description p {
     height: 78px;
+    color: var(--color-black);
     overflow: hidden;
     text-align: justify;
+    font-size: 1.4rem;
 }
+
+.flash-deal-product-sell-time {
+    h3 {
+        font-weight: normal;
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        margin: 1rem 1.6rem;
+        font-size: 1.4rem;
+    }
+    span {
+        font-weight: normal;
+        display: flex;
+        width: 37px;
+        text-align: center;
+    }
+}
+.flash-deal-product-utility {
+    order: 4;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a>i {
+        font-size: 1.4rem;
+    }
+    a>span{
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .bg-grey {
+        max-width: 40px;
+        max-height: 40px;
+        background-color: #f0f0f0;
+    }
+    .button-cart {
+        gap: 1rem;
+    }
+}
+
 
 .flash-deal-product-rating {
     display: flex;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    ul li i {
+        font-size: 1.8rem;
+    }
 }
 
-.flash-deal-product-rating ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
 
 // ------- flash deal end ------ \\
