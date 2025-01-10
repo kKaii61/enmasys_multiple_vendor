@@ -44,7 +44,7 @@ export class FlashDeal extends Component {
         // this.endDate = new Date();
         // this.endDate.setDate(this.endDate.getDate() + 7);
         // Or just set a specific date
-        this.endDate = new Date("2025-1-10");
+        this.endDate = new Date("2025-1-12");
         this.startTimer();
         onMounted(() => { this.snapToItem()});
         onWillUnmount(() => this.stopTimer());

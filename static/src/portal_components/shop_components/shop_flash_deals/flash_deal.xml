@@ -154,7 +154,7 @@
                             <div class="row justify-content-center">
                                 <t t-foreach="this.upsaleProducts" t-as="product" t-key="product.id">
                                     <div class="col-12 col-md-6 col-sm-9 my-3">
-                                        <div class="flash-deal-product" style="margin-top: 0">
+                                        <div class="flash-deal-product rounded" style="margin-top: 0">
                                             <div class="flash-deal-product-inner">
                                                 <a class="flash-deal-product-name" href="">
                                                     Sed dolorem dolor occaecati.
@@ -201,35 +201,54 @@
                                                     </div>
                                                     <div class="flash-deal-product-sell-time rounded">
                                                         <h3>
-                                                            <span class="deal-counter-days">
-                                                                <t t-esc="this.timeRemaining.days"/>
-                                                            </span> days :
-                                                            <span class="deal-counter-hours">
-                                                                <t t-esc="this.timeRemaining.hours"/>
-                                                            </span> hrs :
-                                                            <span class="deal-counter-minutes">
-                                                                <t t-esc="this.timeRemaining.minutes"/>
-                                                            </span> mins :
-                                                            <span class="deal-counter-seconds">
-                                                                <t t-esc="this.timeRemaining.seconds"/>
-                                                            </span> sec
+                                                            <span>
+                                                                <span class="deal-counter-days">
+                                                                    <t t-esc="this.timeRemaining.days"/>
+                                                                </span>
+                                                                days
+                                                            </span>
+                                                            <span class="spacing">:</span>
+                                                            <span>
+                                                                <span class="deal-counter-hours">
+                                                                    <t t-esc="this.timeRemaining.hours"/>
+                                                                </span>
+                                                                hrs
+                                                            </span>
+                                                            <span class="spacing">:</span>
+                                                            <span>
+                                                                <span class="deal-counter-minutes">
+                                                                    <t t-esc="this.timeRemaining.minutes"/>
+                                                                </span>
+                                                                mins
+                                                            </span>
+                                                            <span class="spacing">:</span>
+                                                            <span>
+                                                                <span class="deal-counter-seconds">
+                                                                    <t t-esc="this.timeRemaining.seconds"/>
+                                                                </span>
+                                                                sec
+                                                            </span>
                                                         </h3>
                                                     </div>
                                                 </div>
                                                 <!-- /.flash-deal-product-details -->
-                                                <div class="flash-deal-product-utility d-flex ms-3 mb-3 p-2 gap-4">
+                                                <div class="flash-deal-product-utility d-flex p-2 gap-4">
                                                     <a class="button rounded p-3 bg-grey product-link itemQuickView" href="javascript:void(0);" data-link="" rel="nofollow noindex" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Quick view">
                                                         <i class="fas fa-eye"></i>
+                                                        <span class="tooltiptext">Quick view</span>
                                                     </a>
                                                     <a href="javascript:void(0);" class="button rounded p-3 bg-grey product-link add-to-product-compare" data-link="" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to compare">
                                                         <i class="fas fa-balance-scale"></i>
+                                                        <span class="tooltiptext">Add to compare</span>
                                                     </a>
                                                     <a href="javascript:void(0);" data-link="" class="button rounded p-3 bg-grey add-to-wishlist" data-toggle="tooltip" data-placement="top" title="" style="" data-original-title="Add to wishlist">
                                                         <i class="fas fa-heart"></i>
+                                                        <span class="tooltiptext">Add to wishlist</span>
                                                     </a>
                                                     <a data-link="" class="button rounded button-cart btn-primary sc-add-to-cart px-4" data-toggle="tooltip" data-placement="top" title="" style="cursor: pointer;" data-original-title="Add to Cart">
                                                         <i class="fas fa-shopping-cart"></i>
-                                                        <span class="block">Add to Cart</span>
+                                                        <span>Add to Cart</span>
+                                                        <span class="tooltiptext">Add to Cart</span>
                                                     </a>
                                                 </div>
                                                 <!-- /.flash-deal-product-utility -->
