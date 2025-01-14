@@ -116,19 +116,19 @@ export class FlashDeal extends Component {
     /** end */
     nextItem() {
         const slider = this.sliderRef.el;
-        this.leftVal.value -= slider.children[0].offsetWidth * 6; // Adjust for the sliding distance equal to width of 6 items
+        this.leftVal.value -= Math.round((slider.children[0].offsetWidth * 6)); // Adjust for the sliding distance equal to width of 6 items
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
         this.snapToItem();
     }
     prevItem() {
         const slider = this.sliderRef.el;
-        this.leftVal.value += slider.children[0].offsetWidth * 6; // Adjust for the sliding distance equal to width of 6 items
+        this.leftVal.value += Math.round((slider.children[0].offsetWidth * 6)); // Adjust for the sliding distance equal to width of 6 items
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
         this.snapToItem();
     }
     snapToItem() {
         const slider = this.sliderRef.el;
-        const contentWidth = slider.children[0].offsetWidth * 6;
+        const contentWidth = (slider.children[0].offsetWidth + 10) * 6;
         const snapIndex = Math.round(((this.leftVal.value) / contentWidth));
         this.leftVal.value = snapIndex * contentWidth;
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
