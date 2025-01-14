@@ -220,6 +220,7 @@
             'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_block_banner/*',
             'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_featured_categories/**',
             'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_flash_deals/*',
+            'enmasys_multiple_vendor/static/src/portal_components/shop_components/shop_trending/*',
 
             'enmasys_multiple_vendor/static/src/portal_components/utils/*',
 
