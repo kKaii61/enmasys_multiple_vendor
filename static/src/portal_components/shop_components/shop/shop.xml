@@ -7,6 +7,7 @@
                 <BlockBanner/>
                 <FeaturedCategories/>
                 <FlashDeal/>
+                <Trending/>
             </t>
             <t t-else="">
                 <t t-component="getComponent"/>

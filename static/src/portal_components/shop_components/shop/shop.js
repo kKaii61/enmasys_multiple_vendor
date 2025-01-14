@@ -5,7 +5,7 @@ import { BlockBanner } from "../shop_block_banner/block_banner";
 import { FeaturedCategories } from "../shop_featured_categories/featured_categories";
 import { CategoriesBanner } from "../shop_categories/categories_banner";
 import { FlashDeal } from "../shop_flash_deals/flash_deal";
-
+import { Trending } from "../shop_trending/trending";
 class Shop extends Component {
 
     static template = "enmasys_multiple_vendor.Shop";
@@ -13,7 +13,8 @@ class Shop extends Component {
         BlockBanner,
         FeaturedCategories,
         CategoriesBanner,
-        FlashDeal
+        FlashDeal,
+        Trending
     };
 
     // static defaultProps = {
@@ -33,13 +34,6 @@ class Shop extends Component {
     }
 
     //**
-    //
-    //
-    //
-    get getComponent() {
-        return this.mappedComponents[this.initialView] || Shop;
-    }
-    //**
     /* This function check current path starts with `/shop/`
     /* and capture dynamic parameters after it, then render the corresponding component.
     */
@@ -58,7 +52,7 @@ class Shop extends Component {
     /* and capture dynamic parameters after it, then render the corresponding component.
     */
     checkValidView() {
-        // if(this.initialView.match)
+        if(this.mappedComponents[this.initialView] == undefined){}
     }
 
     //**
@@ -73,6 +67,12 @@ class Shop extends Component {
             acc[newKey] = value;
             return acc;
         }, {});
+    }
+    //**
+    //
+    //
+    get getComponent() {
+        return this.mappedComponents[this.initialView] || Shop;
     }
 }
 registry.category("public_components").add("enmasys_multiple_vendor.Shop", Shop);
