@@ -3,12 +3,21 @@ import { Component, useState, useRef, onWillUnmount, onMounted } from "@odoo/owl
 import { registry } from "@web/core/registry"
 
 const defaultPos = 0;
-export class FlashDeal extends Component {
+export class ShopCarousel extends Component {
 
-    static template = "enmasys_multiple_vendor.FlashDeal";
-    static props = {};
-
+    static template = "enmasys_multiple_vendor.ShopCarousel";
+    static props = {
+        countDown: {type: Boolean, optional: true},
+        multiTab: {type: Boolean, optional: true},
+    };
+    static defaultProps = {
+        countDown: true,
+        multiTab: false
+    }
     setup() {
+
+        console.table(this.props.countDown, this.props.multiTab);
+
         this.products = useState([
             { id: 0, name: "Porsche Cayenne", price_old: "84,700", price_new: "82,500", rating: '3', img: 'car' },
             { id: 1, name: "Porsche Macan", price_old: "75,300", price_new: "74,300", rating: '5', img: 'drone' },
@@ -134,4 +143,4 @@ export class FlashDeal extends Component {
         slider.style.transform = `translateX(${this.leftVal.value}px)`;
     }
 }
-registry.category("public_components").add("enmasys_multiple_vendor.FlashDeal", FlashDeal);
+registry.category("public_components").add("enmasys_multiple_vendor.ShopCarousel", ShopCarousel);

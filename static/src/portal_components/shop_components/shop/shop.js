@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { BlockBanner } from "../shop_block_banner/block_banner";
 import { FeaturedCategories } from "../shop_featured_categories/featured_categories";
 import { CategoriesBanner } from "../shop_categories/categories_banner";
-import { FlashDeal } from "../shop_flash_deals/flash_deal";
+import { ShopCarousel } from "../shop_carousel/shop_carousel";
 import { Trending } from "../shop_trending/trending";
 class Shop extends Component {
 
@@ -13,7 +13,7 @@ class Shop extends Component {
         BlockBanner,
         FeaturedCategories,
         CategoriesBanner,
-        FlashDeal,
+        ShopCarousel,
         Trending
     };
 

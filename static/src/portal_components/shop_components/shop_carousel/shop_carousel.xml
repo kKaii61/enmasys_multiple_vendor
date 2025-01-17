@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates xml:space="reserve">
-    <t t-name="enmasys_multiple_vendor.FlashDeal">
+    <t t-name="enmasys_multiple_vendor.ShopCarousel">
         <t t-value=""/>
         <div class="flash-deal-area">
             <section id="flash-deal" class="mb-3">
@@ -14,25 +14,27 @@
                                         <i class="fas fa-flash"></i>
                                     </h2>
                                 </div>
-                                <div class="flash-sell-timer col-sm-5 offset-sm-2 col-md-6 offset-md-0 d-flex align-items-center">
-                                    <span class="me-4">
+                                <t t-if="props.countDown == true">
+                                    <div class="flash-sell-timer col-sm-5 offset-sm-2 col-md-6 offset-md-0 d-flex align-items-center">
+                                        <span class="me-4">
                                         Offer Ends In :
                                     </span>
-                                    <div class="flash-sell-timer-time px-4 py-2 rounded" >
-                                        <span class="deal-counter-days">
-                                            <t t-esc="this.timeRemaining.days"/>
-                                        </span> days :
-                                        <span class="deal-counter-hours">
-                                            <t t-esc="this.timeRemaining.hours"/>
-                                        </span> hrs :
-                                        <span class="deal-counter-minutes">
-                                            <t t-esc="this.timeRemaining.minutes"/>
-                                        </span> mins :
-                                        <span class="deal-counter-seconds">
-                                            <t t-esc="this.timeRemaining.seconds"/>
-                                        </span> sec
+                                        <div class="flash-sell-timer-time px-4 py-2 rounded" >
+                                            <span class="deal-counter-days">
+                                                <t t-esc="this.timeRemaining.days"/>
+                                            </span> days :
+                                            <span class="deal-counter-hours">
+                                                <t t-esc="this.timeRemaining.hours"/>
+                                            </span> hrs :
+                                            <span class="deal-counter-minutes">
+                                                <t t-esc="this.timeRemaining.minutes"/>
+                                            </span> mins :
+                                            <span class="deal-counter-seconds">
+                                                <t t-esc="this.timeRemaining.seconds"/>
+                                            </span> sec
+                                        </div>
                                     </div>
-                                </div>
+                                </t>
                                 <div class="header-line">
                                     <span></span>
                                 </div>
