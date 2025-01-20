@@ -7,11 +7,13 @@ export class ShopCarousel extends Component {
 
     static template = "enmasys_multiple_vendor.ShopCarousel";
     static props = {
+        title: {type: String, optional:false },
         countDown: {type: Boolean, optional: true},
         multiTab: {type: Boolean, optional: true},
     };
     static defaultProps = {
-        countDown: true,
+        title: "New Title",
+        countDown: false,
         multiTab: false
     }
     setup() {
@@ -31,6 +33,7 @@ export class ShopCarousel extends Component {
             { id: 9, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
             { id: 10, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
             { id: 11, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
+            { id: 12, name: "Headphone", price_old: "900", price_new: "560", rating: '0', img: 'headphone' },
         ]);
         this.upsaleProducts = useState([
             { id: 0, name: "Makeup Box", price_old: "381.77", price_new: "195.77", rating: '0', inStock: 23, img: 'makeup' },
