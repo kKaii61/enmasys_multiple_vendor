@@ -35,26 +35,23 @@
                                         </div>
                                     </div>
                                 </t>
+                                <t t-else="">
+                                </t>
                                 <t t-if="props.multiTab == true">
                                     <div class="feature-tabs">
                                         <ul class="flex-wrap">
-                                            <li class="active mb-md-0 mb-3">
-                                                <a href="#trending-furnitures">
-                                                    Furnitures
-                                                </a>
-                                            </li>
-                                            <li class=" mb-md-0 mb-3">
-                                                <a href="#trending-vel-ut-tempore-voluptate-facere">
-                                                    Mueller-Shields
-                                                </a>
-                                            </li>
-                                            <li class=" mb-md-0 mb-3">
-                                                <a href="#trending-architecto-consequatur-est-aut-ducimus-velit-nostrum">
-                                                    Fisher, Brakus and Keeling
-                                                </a>
-                                            </li>
+                                            <t t-foreach="props.tabs" t-as="tab" t-key="tab.id">
+                                                <li t-att-class="tab.id === state.activeTab ? 'active mb-md-0 mb-3' : 'mb-md-0 mb-3'">
+                                                    <a t-att-href="'#' + tab.href" 
+                                                       t-on-click.prevent="(e) => this.setActiveTab(tab.id)">
+                                                        <t t-esc="tab.name"/>
+                                                    </a>
+                                                </li>
+                                            </t>
                                         </ul>
                                     </div>
+                                </t>
+                                <t t-else="">
                                 </t>
                                 <div class="header-line">
                                     <span></span>

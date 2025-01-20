@@ -6,7 +6,7 @@
                 <CategoriesBanner/>
                 <BlockBanner/>
                 <FeaturedCategories/>
-                <ShopCarousel multiTab="true" title="'Flash Deal'"/>
+                <ShopCarousel multiTab="true" title="'Flash Deal'" tabs="this.tabs" />
                 <Trending/>
             </t>
             <t t-else="">

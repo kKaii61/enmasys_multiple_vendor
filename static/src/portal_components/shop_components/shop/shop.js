@@ -25,6 +25,11 @@ class Shop extends Component {
     // };
 
     setup() {
+        this.tabs = [
+            { id: 'furniture', name: 'Furnitures', href: 'trending-furnitures' },
+            { id: 'mueller', name: 'Mueller-Shields', href: 'trending-vel-ut-tempore-voluptate-facere' },
+            { id: 'fisher', name: 'Fisher, Brakus and Keeling', href: 'trending-architecto-consequatur-est-aut-ducimus-velit-nostrum' }
+        ];
         this.initialView = null;
         this.checkPath();
         this.state = useState({
