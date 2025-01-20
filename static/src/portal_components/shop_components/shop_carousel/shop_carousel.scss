@@ -8,6 +8,14 @@
 ///
 ///
 ///
+/// 
+///
+/// 
+
+.container {
+    min-width: 1320px;
+
+}
 
 .flash-deal {
     display: flex;
@@ -17,6 +25,11 @@
 .sell-header-title {
     min-width: max-content;
     max-width: max-content;
+
+    h2 {
+        font-size: 2rem !important;
+        letter-spacing: 0.9px !important;
+    }
 }
 
 .flash-sell-timer-time {
@@ -30,7 +43,7 @@
 .best-deal-arrow {
     display: flex;
     position: absolute;
-    right: 0;
+    right: 1rem;
 }
 
 .best-deal-arrow ul {
@@ -80,10 +93,10 @@
 
 // Box inner \\
 .box-inner {
-    min-width: 206px;
     max-width: 206px;
-    padding: 0.5rem !important;
+    padding: 5px 0 !important // padding: 0.5rem !important;
 }
+
 //**  animation start  **\\
 .items-slider {
     display: flex;
@@ -91,8 +104,8 @@
     border: solid transparent 2px;
     min-width: 206px;
     max-width: 206px;
-    padding: 0.8rem ;
-    margin-right: 1rem !important;
+    padding: 0 5px !important;
+    margin: 0 5px !important;
     // transform-origin: 0 0;
     // transform: scaleX(0);
     transition: transform 0.4s ease-in-out;
@@ -195,7 +208,8 @@
     position: absolute;
     transform: translate3d(0, 100%, 0);
     transition: transform 0.2s ease-in-out;
-    width: 199px;
+    width: 100%;
+    padding: 12px;
     background: var(--color-white);
     bottom: 0;
     left: 0;
@@ -277,7 +291,7 @@
 
 .flash-deal-product-details {
     display: block;
-    width: 50%;
+    width: calc(100% - 250px);
     order: 3;
 
     .flash-deal-product-price {
@@ -445,3 +459,47 @@
 
 
 // ------- flash deal end ------ \\
+
+
+// ------- multi tabs ---------- \\
+
+.feature-tabs {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 0 !important;
+    }
+
+    ul li {
+        display: flex;
+        /* align-items: center; */
+        border: 1px solid var(--gray);
+        padding: 2px 15px;
+        margin-top: 0 !important;
+        margin-inline-end: 15px;
+        border-radius: 1rem !important;
+        letter-spacing: 0.5px;
+    }
+    ul li:hover {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    ul li.active {
+        color: var(--color-primary);
+        box-shadow: var(--box-shadow);
+        border: 2px solid var(--color-primary);
+    }
+    ul li a {
+        color: var(--color-black);
+    }
+    ul li.active a {
+        color: inherit;
+    }
+}
