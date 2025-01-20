@@ -5,13 +5,13 @@
         <div class="flash-deal-area">
             <section id="flash-deal" class="mb-3">
                 <div class="flash-deal pt-0">
-                    <div class="container-fluid mx-2">
+                    <div class="container">
                         <div class="flash-deal-inner">
                             <div class="sell-header d-flex flex-wrap align-items-center">
                                 <div class="sell-header-title">
                                     <h2 class="font-weight-bold mt-4 me-5 col">
-                                        Flash Deal
-                                        <i class="fas fa-flash"></i>
+                                        <t t-esc="props.title"/>
+                                        <i class="fas fa-flash ms-3"></i>
                                     </h2>
                                 </div>
                                 <t t-if="props.countDown == true">
@@ -33,6 +33,27 @@
                                                 <t t-esc="this.timeRemaining.seconds"/>
                                             </span> sec
                                         </div>
+                                    </div>
+                                </t>
+                                <t t-if="props.multiTab == true">
+                                    <div class="feature-tabs">
+                                        <ul class="flex-wrap">
+                                            <li class="active mb-md-0 mb-3">
+                                                <a href="#trending-furnitures">
+                                                    Furnitures
+                                                </a>
+                                            </li>
+                                            <li class=" mb-md-0 mb-3">
+                                                <a href="#trending-vel-ut-tempore-voluptate-facere">
+                                                    Mueller-Shields
+                                                </a>
+                                            </li>
+                                            <li class=" mb-md-0 mb-3">
+                                                <a href="#trending-architecto-consequatur-est-aut-ducimus-velit-nostrum">
+                                                    Fisher, Brakus and Keeling
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </t>
                                 <div class="header-line">
@@ -121,7 +142,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <!-- floating when hover -->
-                                                                <div class="box-action d-flex flex-column px-3 slideInUp">
+                                                                <div class="box-action d-flex flex-column slideInUp">
                                                                     <div class="box-action-price d-flex flex-row">
                                                                         <p class="feature-items-price-new box-price-new mt-0 mb-2">
                                                                             <t t-esc="'$'+product.price_new"/>
@@ -170,7 +191,7 @@
                                                 </div>
                                                 <div class="flash-deal-product-details">
                                                     <div class="flash-deal-product-price">
-                                                        <p class="feature-items-price-new box-price-new m-0 me-3">
+                                                        <p class="feature-items-price-new box-price-new m-0">
                                                             <t t-esc="'$'+product.price_new"/>
                                                         </p>
                                                         <p class="feature-items-price-old box-price-old ">
