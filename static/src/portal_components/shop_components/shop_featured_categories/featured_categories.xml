@@ -2,7 +2,7 @@
 <templates xml:space="reserve">
     <t t-name="enmasys_multiple_vendor.FeaturedCategories">
         <section class="featured-category-section my-md-5 my-5">
-            <div class="container-fluid mx-2 overflow-x-hidden overflow-y-hidden position-relative">
+            <div class="container overflow-x-hidden overflow-y-hidden position-relative">
                 <div class="sell-header mb-4 mt-xl-0 d-flex">
                     <div class="sell-header-title">
                         <h2>
