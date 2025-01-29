@@ -12,9 +12,10 @@
 ///
 /// 
 
-.container {
-    min-width: 1320px;
-
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1320px;
+    }
 }
 
 .flash-deal {
