@@ -11,7 +11,7 @@
                          t-ref="{{category.id}}"
                           style="opacity: 0; z-index: 1;">
                             <a href="/category/">
-                                <img class="responsive" style="min-height:350px;" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '.png'" data-src="" alt=""/>
+                                <img class="responsive" style="" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '.png'" data-src="" alt=""/>
                             </a>
                         </li>
                     </t>
@@ -20,12 +20,12 @@
                 <ul class="ei-slider-thumbs" style="max-width: 600px; z-index: 5">
                     <li class="ei-slider-element" t-ref="sliderElement" style="color: transparent;max-width: 150px; width: 25%; left: 0px;">Current</li>
                     <t t-foreach="this.categories" t-as="category" t-key="category.id">
-                        <li  style="max-width: 150px; width: 25%;">
+                        <li>
                             <a t-on-click="() => this.changeSlide(category.id)" href="javascript:void(0);">
                                 Slide
                                 <span t-esc="category.id"/>
                             </a>
-                            <img class="thumb-img position-absolute" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '_thumb.png'" data-src="" t-att-alt="'thumbnail ' + category.id"/>
+                            <img class="thumb-img" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_banner/' + category.img + '_thumb.png'" data-src="" t-att-alt="'thumbnail ' + category.id"/>
                         </li>
                     </t>
                 </ul>
