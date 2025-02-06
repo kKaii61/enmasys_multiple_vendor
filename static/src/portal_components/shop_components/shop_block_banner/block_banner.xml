@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="enmasys_multiple_vendor.BlockBanner">
-        <section class="banner-block my-3 d-flex justify-content-center align-items-center">
-            <div class="container mx-3 p-0 h-100">
-                <div class="d-flex justify-content-center row row-cols-4">
+        <section class="banner-block">
+            <div class="container mt-3 mb-md-0">
+                <div class="justify-content-center row">
                     <t t-foreach="this.products" t-as="product" t-key="product.id">
-                        <div class="banner-container rounded col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6 mb-4 mb-md-0">
                             <a href="">
                                 <div class="image-banner">
                                     <div class="banner-box">
                                         <img class="rounded" t-att-src="'/enmasys_multiple_vendor/static/images/zcart_blockbanner/'+product.imgName" data-src="" alt="Banner Image" title="Banner Image"/>
-                                        
-                                        
                                         <!-- <div class="banner-overlay">
                                             <div class="banner-texts">
                                                 <div class="banner-overlay-title">
