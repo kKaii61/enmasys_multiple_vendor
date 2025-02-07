@@ -4,7 +4,7 @@
         <section>
             <!-- /.ei-slider start -->
             <div id="ei-slider" class="ei-slider">
-                <div class="ei-slider-loading" style="display: block;">Loading</div>
+                <div class="ei-slider-loading" t-ref="loading" style="display: block;">Loading</div>
                 <ul class="ei-slider-large p-0 w-100">
                     <t t-foreach="this.categories" t-as="category" t-key="category.id">
                         <li
