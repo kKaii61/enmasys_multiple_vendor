@@ -35,8 +35,6 @@
                                         </div>
                                     </div>
                                 </t>
-                                <t t-else="">
-                                </t>
                                 <t t-if="props.multiTab == true">
                                     <div class="feature-tabs">
                                         <ul class="flex-wrap">
@@ -82,6 +80,7 @@
                                                 <div class="slick-track d-flex" style=""
                                                     t-ref="slick"
                                                     t-att-style="'transform: translate3d('+ this.leftVal.value +'px, 0px, 0px); transition: all 0.5s ease-in-out'">
+                                                    
                                                     <t t-foreach="this.products" t-as="product" t-key="product.id">
                                                         <div class="items-slider p-0 position-relative box border-animate slick-slide d-flex flex-nowrap"
                                                              data-slick-index="" aria-hidden="true" tabindex="-1">
@@ -160,6 +159,7 @@
                                                             <!-- /.box-inner -->
                                                         </div>
                                                     </t>
+
                                                 </div>
                                             </div>
                                         </div>
