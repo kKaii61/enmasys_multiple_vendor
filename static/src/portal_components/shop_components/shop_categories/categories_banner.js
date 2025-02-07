@@ -20,12 +20,16 @@ export class CategoriesBanner extends Component {
         this.sliderElement = useRef("sliderElement");
         this.sliderLeft = useState({ value: 0 })
 
+        this.loadingText = useRef('loading');
+
         onMounted(() => {
             this.setupSlide();
             // Make this interval accessible on unmounted
             this.interval = setInterval(() => {
                 this.processSlider();
             }, this.time);
+            setTimeout(() => { this.loadingText.el.style.display = "none"; }
+                , this.time)
         });
 
         // Clear event, interval, ...
@@ -58,25 +62,46 @@ export class CategoriesBanner extends Component {
         if (this.index.current != this.categories.length - 1) {
             this.index.prev = this.index.current;
             this.index.current = this.index.current + 1;
-            this.updateSlides();
-            this.updateSlider();
+            this.updateSlide();
         } else {
             this.index.prev = this.index.current;
             this.index.current = 0;
-            this.updateSlides();
-            this.updateSlider();
+            this.updateSlide();
         }
+    }
+
+    updateSlide() {
+        this.updateSlides();
+        this.updateSlider();
     }
 
     // Change slides visibility
     updateSlides = () => {
         this.slideRefs.forEach((slide, index) => {
             if (index === this.index.current) {
-                slide.el.style.opacity = "1";
-                slide.el.style.zIndex = "2";
+                try {
+                    slide.el.style.opacity = "1";
+                    slide.el.style.zIndex = "2";
+                } catch (error) {
+                    if (this.index.current == index) {
+                        this.loadingText.el.style.display = "block";
+                    } else {
+                        this.loadingText.el.style.display = "none";
+                    }
+                    console.log(`not found ${index}. move on..`);
+                }
             } else {
-                slide.el.style.opacity = "0";
-                slide.el.style.zIndex = "1";
+                try {
+                    slide.el.style.opacity = "0";
+                    slide.el.style.zIndex = "1";
+                } catch (error) {
+                    if (this.index.current == index) {
+                        this.loadingText.el.style.display = "block";
+                    } else {
+                        this.loadingText.el.style.display = "none";
+                    }
+                    console.log(`not found ${index}. move on..`);
+                }
             }
         });
     };
@@ -104,12 +129,10 @@ export class CategoriesBanner extends Component {
                 break;
         }
     }
-
     // Change current slide and update
     changeSlide(index) {
         this.index.current = index;
-        this.updateSlides();
-        this.updateSlider();
+        this.updateSlide()
         clearInterval(this.interval);
         this.interval = setInterval(() => {
             this.processSlider();
