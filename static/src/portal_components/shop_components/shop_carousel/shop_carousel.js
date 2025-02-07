@@ -29,7 +29,7 @@ export class ShopCarousel extends Component {
     }
     setup() {
 
-        console.table(this.props.countDown, this.props.multiTab, this.props.tabs);
+        // console.table(this.props.countDown, this.props.multiTab, this.props.tabs);
 
         /////////////// TITLE \\\\\\\\\\\\\\\
         this.state = useState({
@@ -38,7 +38,8 @@ export class ShopCarousel extends Component {
         
 
         ////////////////////////////////             Products Demo        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        this.products = useState([
+        
+        this.products1 = useState([
             { id: 0, name: "Porsche Cayenne", price_old: "84,700", price_new: "82,500", rating: '3', img: 'car' },
             { id: 1, name: "Porsche Macan", price_old: "75,300", price_new: "74,300", rating: '5', img: 'drone' },
             { id: 2, name: "Shoes", price_old: "102,800", price_new: "101,000", rating: '1', img: 'shoes' },
@@ -84,6 +85,8 @@ export class ShopCarousel extends Component {
             { id: 12, name: "Router", price_old: "900", price_new: "560", rating: '0', img: 'router' },
         ]);
 
+
+        this.products = this.products1;
         this.upsaleProducts = useState([
             { id: 0, name: "Makeup Box", price_old: "381.77", price_new: "195.77", rating: '0', inStock: 23, img: 'makeup' },
             { id: 1, name: "Drone", price_old: "266.00", price_new: "199.99", rating: '4', inStock: 12, img: 'drone' },
@@ -120,11 +123,25 @@ export class ShopCarousel extends Component {
             }
         });
     }
+    setDefault() {
+        const slider = this.sliderRef.el;
+        slider.style.transition = "none";
+        slider.style.transform = `translateX(0px)`;
+        this.leftVal.value = 0;
+        slider.style.transition = "all 0.5s ease-in-out";
+    }
     setActiveTab(tabId) {
         this.state.activeTab = tabId;
         // Here you can also trigger content loading for the selected tab
+        this.setDefault();
         this.loadTabContent(tabId);
     }
+    loadTabContent(tabId){
+        if(tabId == "furniture") this.products = this.products1
+        if(tabId == "mueller") this.products = this.products2
+        if(tabId == "fisher") this.products = this.products3
+    }
+
     // Render Rating Stars
     generateStars(rating) {
         const stars = [];
